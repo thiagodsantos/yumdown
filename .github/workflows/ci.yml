@@ -40,6 +40,9 @@ jobs:
       - name: Frontend tests
         working-directory: frontend
         run: pnpm test
+      - name: Build frontend assets
+        working-directory: frontend
+        run: pnpm build
       - name: Go tests
         run: go test ./...
       - name: Cross-compile Windows amd64 Go targets
