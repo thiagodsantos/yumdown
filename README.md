@@ -29,6 +29,10 @@ You can also run `wails dev -tags webkit2_41` and `wails build -tags webkit2_41`
 
 The frontend can also be checked separately with `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm format:check`, and `pnpm build` from `frontend/`. Run backend tests from the repository root with `go test ./...`.
 
+## Releases
+
+Push a semantic-version tag such as `v0.1.0` to start a release. The release workflow runs the CI checks first, then builds a Linux/amd64 app archive and publishes it to the repository's GitHub Releases page. Before tagging, add release notes under the matching heading in `CHANGELOG.md`, for example `## [0.1.0] - YYYY-MM-DD`. The workflow uses that version's section as the GitHub release notes.
+
 ## Media tool setup
 
 Yumdown does not download or update third-party executables automatically. Put executable `yt-dlp` and `ffmpeg` binaries in one of these locations:
